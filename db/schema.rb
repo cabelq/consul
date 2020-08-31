@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200519120717) do
+ActiveRecord::Schema.define(version: 20200831112342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -236,8 +236,6 @@ ActiveRecord::Schema.define(version: 20200519120717) do
   create_table "budget_investments", id: :serial, force: :cascade do |t|
     t.integer "author_id"
     t.integer "administrator_id"
-    t.string "deprecated_title"
-    t.text "deprecated_description"
     t.string "external_url"
     t.bigint "price"
     t.string "feasibility", limit: 15, default: "undecided"
