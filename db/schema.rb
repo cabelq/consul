@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200831112559) do
+ActiveRecord::Schema.define(version: 20200831112936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -480,8 +480,6 @@ ActiveRecord::Schema.define(version: 20200831112559) do
   end
 
   create_table "debates", id: :serial, force: :cascade do |t|
-    t.string "deprecated_title", limit: 80
-    t.text "deprecated_description"
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
